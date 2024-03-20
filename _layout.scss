@@ -12,39 +12,135 @@ body {
 
 .introduction {
     background-color: green;
-    height: 150px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 20px 30px 50px;
 
     &__hi {
+        padding: 20px 0 30px;
 
+    }
+
+    &__job {
+        text-align: left;
     }
 }
 
 .aboutme {
     background-color: blue;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 25px;
+    align-items: center;
+
+    &__heading {
+        padding: 0px 0px 20px;
+        text-align: center;
+    }
+
     &__image {
-        width: 100%;
+        width: 80%;
+        padding: 0 0 20px;
+    }
+
+    &__paragraph {
+        padding-bottom: 13px;
     }
 }
 
 .skills {
     background-color: lightcoral;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__visual-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+
+        img {
+            width: 40px;
+        }
+    }
 }
 
 .project-section {
     background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .project-section__title{
+        padding: 20px;
+    }
 
     .project {
+        background-color: green;
+        width: 90%;
+        padding: 0 0 40px;
 
-        .project__img {
-            height: 250px
+        &__img {
+            width: 100%;
+            align-items: center;
+            padding-bottom: 10px;
+        }
+
+        &__language {
+            align-items: flex-start;
+            padding: 5px 0 8px;
+        }
+        
+        &__description {
+            padding: 10px 0;
+        }
+
+        &__button {
+            display: flex;
+            flex-direction: row;
+            margin: 4px 0 10px 0;
+
+
+            &--code {
+                width: 70px;
+                border: 1px solid black;
+                border-radius: 5px;
+                padding: 4px 10px;
+                text-align: center;
+                margin: 0 8px 0 0;
+            }
+
+            &--preview  {
+                width: 80px;
+                border: 1px solid black;
+                border-radius: 5px;
+                padding: 4px 10px;
+                text-align: center;
+                
+            }
         }
     }
 }
 
 .footer {
-    background-color: black;
-    color: white;
+    background-color: pink;
+    width: 100%;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+
+    img {
+        height: 40px;
+        padding: 0 5px;
+    }
+
+    &__email {
+        color: white;
+        text-decoration: none;
+        padding: 20px 0 30px;
+    }
 }
