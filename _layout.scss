@@ -10,6 +10,10 @@ body {
     align-items: center;
 }
 
+.navigation {
+    display:none;
+}
+
 .introduction {
     background-color: green;
     height: auto;
@@ -25,6 +29,10 @@ body {
 
     &__job {
         text-align: left;
+    }
+
+    &__image {
+        display:none;
     }
 }
 
@@ -56,7 +64,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 0 100px;
+    padding: 20px 0 50px;
 
 
     &__heading {
@@ -77,7 +85,7 @@ body {
         gap: 5px;
         text-align: center;
 
-        .skills__visual-grid--group {
+        .visual-grid__group {
             padding: 4px;
             
             img {
@@ -96,7 +104,7 @@ body {
     .project-section__title{
         padding: 20px;
     }
-
+}
     .project {
         background-color: green;
         width: 90%;
@@ -142,6 +150,10 @@ body {
             }
         }
     }
+
+
+.project-desktop {
+    display:none;
 }
 
 .footer {
@@ -162,5 +174,117 @@ body {
         color: white;
         text-decoration: none;
         padding: 20px 0 30px;
+    }
+}
+
+@media screen and (min-width: 1440px ) {
+    .navigation {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 20px 70px 20px 90px;
+        background-color: yellow;
+
+        &__menu--link {
+            padding: 10px;
+        }
+
+        &__menu--button {
+            padding: 10px;
+            margin: 10px;
+        }
+    }
+
+    .introduction {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 2fr 1fr;
+        place-items: center;
+        padding: 100px 200px 100px 150px;
+        gap: 0px;
+
+        &__hi {
+            padding-bottom: 30px;
+        }
+        &__image {
+            display: block;
+        }
+    }
+
+    .aboutme{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: repeat(4,fr);
+        gap: 10px; 
+        height: auto;
+        padding: 80px 120px;
+
+        &__heading {
+            grid-column: 2;
+            grid-row:2;
+            text-align: left;
+        }
+        &__image {
+            grid-column: 1;
+            grid-row:1/5;
+            padding: 0;
+            width: 85%; 
+        }
+
+        &__paragraph {
+            padding: 0;
+            grid-column: 2;
+            grid-row:3;
+        }
+    }
+
+    .skills {
+
+        &__description {
+            padding: 10px 0;
+        }
+
+        &__visual-grid {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+
+            &--group {
+                margin: 10px;
+            }
+        }
+    }
+
+    .project-section {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 2fr 2fr 2fr;
+        grid-template-rows: 100px 2fr 2fr;
+        place-items: center;
+        padding: 20px 100px 50px;
+
+        &__title{
+            grid-column: 1/4;
+            grid-row: 1;
+            text-align: center;
+        }
+
+        .project-desktop {
+            display: inline-block;
+            background-color: green;
+            width: 90%;
+            padding: 20px 0 40px;
+        }
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 70px 20px 90px;
     }
 }
