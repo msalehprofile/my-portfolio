@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300;400;500;600;700&display=swap');
+$font-primary: Hind Guntur, sans-serif;
+
+$color-primary: black;
+$color-button: #454b4f;
+$color-white: #fafdff;
+$color-footer: #deb8e6;
+
+* {
+    font-family: $font-primary;
+}
+
+// setting font size and weight
+.introduction__hi {
+    font-size: 16px;
+    font-weight: 100;
+
+}
+
+// setting font size and weight to intro
+.introduction__job {
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 75px;
+
+}
+
+// adding font sizes and weights to about me section
+.aboutme {
+
+    &__heading {
+        font-weight: 600;
+        font-size: 25px;
+    }
+
+    &__paragraph {
+        line-height: 25px;
+        font-weight: lighter;
+    }
+}
+
+.skills {
+    &__heading {
+        font-weight: 600;
+        font-size: 25px;
+    }
+
+    &__description {
+        font-size: 16px;
+        line-height: 23px;
+        font-weight: lighter;
+    }
+}
+
+.project-section {
+
+
+    &__title {
+        font-weight: 600;
+        font-size: 25px;
+    }
+
+    .project {
+        &__language {
+            font-size: 15px;
+            line-height: 35px;
+            font-weight: 400;
+        }
+
+        &__name {
+            font-size: 30px;
+            line-height: 30px;
+            font-weight: 500;
+        }
+
+        &__description {
+            font-size: 16px;
+            line-height: 23px;
+            font-weight: lighter;
+        }
+
+        &__button--code, &__button--preview {
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            color:black;
+
+            &:active {
+                background-color: $color-button;
+                border: 1px solid $color-button;
+                color: $color-white;
+
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: $color-footer;
+
+    &__email {
+        text-decoration: none;
+        color: $color-primary;
+        font-weight: lighter;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .navigation {
+
+        &__name{
+        font-size: 25px;
+        font-weight: 400;
+        }
+
+        &__menu--link {
+            text-decoration: none;
+            color: $color-primary;
+        }
+
+        &__menu--button {
+            border: 1px solid $color-primary;
+            border-radius: 5px;
+            padding: 5px 16px;
+            text-decoration: none;
+            background-color: $color-white;
+            color: $color-primary;
+            font-size: 16px;
+            font-weight: 500;
+            
+            &:hover {
+                background-color: $color-button;
+                border: 1px solid $color-button;
+                color: $color-white;
+            }
+        }
+    }
+
+    .project__button--code:hover, .project__button--preview:hover {
+            background-color: $color-button;
+            border: 1px solid $color-button;
+            color: $color-white;
+        }
+}

@@ -4,26 +4,28 @@
     box-sizing: border-box;
 }
 
+// centering everything
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+// Do not want navigation bar to show in mobile version
 .navigation {
     display:none;
 }
 
+//intro section layout
 .introduction {
-    background-color: green;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 20px 30px 50px;
+    padding: 20px 40px 50px;
 
     &__hi {
-        padding: 20px 0 30px;
+        padding: 40px 0 30px;
 
     }
 
@@ -36,11 +38,11 @@ body {
     }
 }
 
+//about me section layout
 .aboutme {
-    background-color: blue;
     display: flex;
     flex-direction: column;
-    padding: 20px 25px;
+    padding: 20px 30px;
     align-items: center;
 
     &__heading {
@@ -54,25 +56,21 @@ body {
     }
 
     &__paragraph {
-        padding-bottom: 13px;
+        padding: 15px 10px 20px;
+
     }
 }
 
+//skill section with 9 skills set out using grid
 .skills {
-    background-color: lightcoral;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px 0 50px;
 
-
-    &__heading {
-        padding-bottom: 15px;
-    }
-
     &__description {
-        padding-bottom: 40px;
+        padding: 20px 30px 30px;
         text-align: center;
     }
 
@@ -95,67 +93,75 @@ body {
     }
 }
 
+//Showing projects, 3 visible in mobile version
 .project-section {
-    background-color: aquamarine;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    
+    grid-template-columns: 4;
     
     .project-section__title{
         padding: 20px;
     }
 }
-    .project {
-        background-color: green;
+
+.project {
         width: 90%;
-        padding: 0 0 40px;
+        padding: 0 0 10px;
+        margin-bottom: 20px;
 
         &__img {
             width: 100%;
             align-items: center;
             padding-bottom: 10px;
+            border-radius: 8px;
         }
 
         &__language {
             align-items: flex-start;
-            padding: 5px 0 8px;
+            padding-top: 5px;
+        }
+
+        &__name {
+            padding-bottom: 7px;
         }
         
         &__description {
-            padding: 10px 0;
+            padding: 5px 0;
         }
 
         &__button {
             display: flex;
             flex-direction: row;
+            align-items: center;
             margin: 4px 0 10px 0;
 
 
             &--code {
-                width: 90px;
+                width: 100px;
                 border: 1px solid black;
                 border-radius: 5px;
-                padding: 5px 10px;
+                padding: 5px 12px;
                 text-align: center;
-                margin: 0 8px 0 0;
+                margin-right: 18px;
             }
 
             &--preview  {
                 width: 120px;
                 border: 1px solid black;
                 border-radius: 5px;
-                padding: 5px 10px;
+                padding: 5px 12px;
                 text-align: center;
                 
             }
         }
     }
 
-
+// hiding the three projects shown only on desktop
 .project-desktop {
     display:none;
 }
 
+// layout for the footer
 .footer {
     background-color: pink;
     width: 100%;
@@ -171,23 +177,23 @@ body {
     }
 
     &__email {
-        color: white;
         text-decoration: none;
-        padding: 20px 0 30px;
+        padding: 20px 0 10px;
     }
 }
 
-@media screen and (min-width: 1440px ) {
+//amending the layout for a desktop
+@media screen and (min-width: 1440px) {
+    //making the nav bar visible as a flex
     .navigation {
         display:flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
         padding: 20px 70px 20px 90px;
-        background-color: yellow;
 
         &__menu--link {
-            padding: 10px;
+            padding: 1px;
         }
 
         &__menu--button {
@@ -196,6 +202,7 @@ body {
         }
     }
 
+//changed the intro section into a grid and added an image
     .introduction {
         display: grid;
         width: 100%;
@@ -212,6 +219,7 @@ body {
         }
     }
 
+// amended the about me section into a grid
     .aboutme{
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -239,6 +247,7 @@ body {
         }
     }
 
+// amended the 9 skills to a flex row and added padding etc
     .skills {
 
         &__description {
@@ -250,13 +259,15 @@ body {
             align-items: center;
             justify-content: center;
             padding: 20px;
-
-            &--group {
-                margin: 10px;
+            
+            .visual-grid__group{
+                padding: 5px 15px;
+            }
             }
         }
     }
 
+//amended the projects to be 3 x 2 as a grid format
     .project-section {
         display: grid;
         width: 100%;
@@ -273,12 +284,12 @@ body {
 
         .project-desktop {
             display: inline-block;
-            background-color: green;
             width: 90%;
             padding: 20px 0 40px;
         }
     }
 
+// amended the layout of the footer to have email and social media on one line
     .footer {
         display: flex;
         flex-direction: row-reverse;
@@ -287,4 +298,3 @@ body {
         align-items: center;
         padding: 20px 70px 20px 90px;
     }
-}

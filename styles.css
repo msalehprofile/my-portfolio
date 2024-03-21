@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300;400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -15,15 +16,14 @@ body {
 }
 
 .introduction {
-  background-color: green;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 20px 30px 50px;
+  padding: 20px 40px 50px;
 }
 .introduction__hi {
-  padding: 20px 0 30px;
+  padding: 40px 0 30px;
 }
 .introduction__job {
   text-align: left;
@@ -33,10 +33,9 @@ body {
 }
 
 .aboutme {
-  background-color: blue;
   display: flex;
   flex-direction: column;
-  padding: 20px 25px;
+  padding: 20px 30px;
   align-items: center;
 }
 .aboutme__heading {
@@ -48,22 +47,18 @@ body {
   padding: 0 0 20px;
 }
 .aboutme__paragraph {
-  padding-bottom: 13px;
+  padding: 15px 10px 20px;
 }
 
 .skills {
-  background-color: lightcoral;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px 0 50px;
 }
-.skills__heading {
-  padding-bottom: 15px;
-}
 .skills__description {
-  padding-bottom: 40px;
+  padding: 20px 30px 30px;
   text-align: center;
 }
 .skills__visual-grid {
@@ -83,50 +78,53 @@ body {
 }
 
 .project-section {
-  background-color: aquamarine;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 4;
 }
 .project-section .project-section__title {
   padding: 20px;
 }
 
 .project {
-  background-color: green;
   width: 90%;
-  padding: 0 0 40px;
+  padding: 0 0 10px;
+  margin-bottom: 20px;
 }
 .project__img {
   width: 100%;
   align-items: center;
   padding-bottom: 10px;
+  border-radius: 8px;
 }
 .project__language {
   align-items: flex-start;
-  padding: 5px 0 8px;
+  padding-top: 5px;
+}
+.project__name {
+  padding-bottom: 7px;
 }
 .project__description {
-  padding: 10px 0;
+  padding: 5px 0;
 }
 .project__button {
   display: flex;
   flex-direction: row;
+  align-items: center;
   margin: 4px 0 10px 0;
 }
 .project__button--code {
-  width: 90px;
+  width: 100px;
   border: 1px solid black;
   border-radius: 5px;
-  padding: 5px 10px;
+  padding: 5px 12px;
   text-align: center;
-  margin: 0 8px 0 0;
+  margin-right: 18px;
 }
 .project__button--preview {
   width: 120px;
   border: 1px solid black;
   border-radius: 5px;
-  padding: 5px 10px;
+  padding: 5px 12px;
   text-align: center;
 }
 
@@ -148,9 +146,8 @@ body {
   padding: 0 5px;
 }
 .footer__email {
-  color: white;
   text-decoration: none;
-  padding: 20px 0 30px;
+  padding: 20px 0 10px;
 }
 
 @media screen and (min-width: 1440px) {
@@ -160,10 +157,9 @@ body {
     align-items: center;
     width: 100%;
     padding: 20px 70px 20px 90px;
-    background-color: yellow;
   }
   .navigation__menu--link {
-    padding: 10px;
+    padding: 1px;
   }
   .navigation__menu--button {
     padding: 10px;
@@ -216,41 +212,139 @@ body {
     justify-content: center;
     padding: 20px;
   }
-  .skills__visual-grid--group {
-    margin: 10px;
-  }
-  .project-section {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 2fr 2fr 2fr;
-    grid-template-rows: 100px 2fr 2fr;
-    place-items: center;
-    padding: 20px 100px 50px;
-  }
-  .project-section__title {
-    grid-column: 1/4;
-    grid-row: 1;
-    text-align: center;
-  }
-  .project-section .project-desktop {
-    display: inline-block;
-    background-color: green;
-    width: 90%;
-    padding: 20px 0 40px;
-  }
-  .footer {
-    display: flex;
-    flex-direction: row-reverse;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 70px 20px 90px;
+  .skills__visual-grid .visual-grid__group {
+    padding: 5px 15px;
   }
 }
-.introduction__job {
-  font-size: 50px;
+.project-section {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-rows: 100px 2fr 2fr;
+  place-items: center;
+  padding: 20px 100px 50px;
+}
+.project-section__title {
+  grid-column: 1/4;
+  grid-row: 1;
+  text-align: center;
+}
+.project-section .project-desktop {
+  display: inline-block;
+  width: 90%;
+  padding: 20px 0 40px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 70px 20px 90px;
+}
+
+* {
+  font-family: Hind Guntur, sans-serif;
 }
 
 .introduction__hi {
-  font-size: 20px;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.introduction__job {
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 75px;
+}
+
+.aboutme__heading {
+  font-weight: 600;
+  font-size: 25px;
+}
+.aboutme__paragraph {
+  line-height: 25px;
+  font-weight: lighter;
+}
+
+.skills__heading {
+  font-weight: 600;
+  font-size: 25px;
+}
+.skills__description {
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: lighter;
+}
+
+.project-section__title {
+  font-weight: 600;
+  font-size: 25px;
+}
+.project-section .project__language {
+  font-size: 15px;
+  line-height: 35px;
+  font-weight: 400;
+}
+.project-section .project__name {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 500;
+}
+.project-section .project__description {
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: lighter;
+}
+.project-section .project__button--code, .project-section .project__button--preview {
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+}
+.project-section .project__button--code:active, .project-section .project__button--preview:active {
+  background-color: #454b4f;
+  border: 1px solid #454b4f;
+  color: #fafdff;
+}
+
+.footer {
+  background-color: #deb8e6;
+}
+.footer__email {
+  text-decoration: none;
+  color: black;
+  font-weight: lighter;
+}
+
+@media screen and (min-width: 1440px) {
+  .navigation__name {
+    font-size: 25px;
+    font-weight: 400;
+  }
+  .navigation__menu--link {
+    text-decoration: none;
+    color: black;
+  }
+  .navigation__menu--button {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 16px;
+    text-decoration: none;
+    background-color: #fafdff;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .navigation__menu--button:hover {
+    background-color: #454b4f;
+    border: 1px solid #454b4f;
+    color: #fafdff;
+  }
+  .project__button--code:hover, .project__button--preview:hover {
+    background-color: #454b4f;
+    border: 1px solid #454b4f;
+    color: #fafdff;
+  }
 }
