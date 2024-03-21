@@ -57,7 +57,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 0 100px;
+  padding: 20px 0 50px;
 }
 .skills__heading {
   padding-bottom: 15px;
@@ -201,6 +201,18 @@ body {
     padding: 0;
     grid-column: 2;
     grid-row: 3;
+  }
+  .skills__description {
+    padding: 10px 0;
+  }
+  .skills__visual-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .skills__visual-grid--group {
+    margin: 10px;
   }
 }
 .introduction__job {
