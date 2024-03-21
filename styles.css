@@ -49,14 +49,14 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 20px;
   align-items: center;
+  padding: 20px 0 100px;
 }
 .skills__heading {
   padding-bottom: 15px;
 }
 .skills__description {
-  padding-bottom: 15px;
+  padding-bottom: 40px;
   text-align: center;
 }
 .skills__visual-grid {
