@@ -96,7 +96,8 @@ body {
 //Showing projects, 3 visible in mobile version
 .project-section {
     display: flex;
-    
+    flex-direction: column;
+    align-items: center;
     grid-template-columns: 4;
     
     .project-section__title{
@@ -265,7 +266,7 @@ body {
             }
             }
         }
-    }
+    
 
 //amended the projects to be 3 x 2 as a grid format
     .project-section {
@@ -298,3 +299,4 @@ body {
         align-items: center;
         padding: 20px 70px 20px 90px;
     }
+}
