@@ -10,6 +10,10 @@ body {
   align-items: center;
 }
 
+.navigation {
+  display: none;
+}
+
 .introduction {
   background-color: green;
   height: auto;
@@ -23,6 +27,9 @@ body {
 }
 .introduction__job {
   text-align: left;
+}
+.introduction__image {
+  display: none;
 }
 
 .aboutme {
@@ -141,6 +148,61 @@ body {
   padding: 20px 0 30px;
 }
 
+@media screen and (min-width: 1440px) {
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 70px 20px 90px;
+    background-color: yellow;
+  }
+  .navigation__menu--link {
+    padding: 10px;
+  }
+  .navigation__menu--button {
+    padding: 10px;
+    margin: 10px;
+  }
+  .introduction {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 2fr 1fr;
+    place-items: center;
+    padding: 100px 200px 100px 150px;
+    gap: 0px;
+  }
+  .introduction__hi {
+    padding-bottom: 30px;
+  }
+  .introduction__image {
+    display: block;
+  }
+  .aboutme {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(4, fr);
+    gap: 10px;
+    height: auto;
+    padding: 80px 120px;
+  }
+  .aboutme__heading {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: left;
+  }
+  .aboutme__image {
+    grid-column: 1;
+    grid-row: 1/5;
+    padding: 0;
+    width: 85%;
+  }
+  .aboutme__paragraph {
+    padding: 0;
+    grid-column: 2;
+    grid-row: 3;
+  }
+}
 .introduction__job {
   font-size: 50px;
 }
