@@ -91,29 +91,30 @@ body {
 .project-section .project-section__title {
   padding: 20px;
 }
-.project-section .project {
+
+.project {
   background-color: green;
   width: 90%;
   padding: 0 0 40px;
 }
-.project-section .project__img {
+.project__img {
   width: 100%;
   align-items: center;
   padding-bottom: 10px;
 }
-.project-section .project__language {
+.project__language {
   align-items: flex-start;
   padding: 5px 0 8px;
 }
-.project-section .project__description {
+.project__description {
   padding: 10px 0;
 }
-.project-section .project__button {
+.project__button {
   display: flex;
   flex-direction: row;
   margin: 4px 0 10px 0;
 }
-.project-section .project__button--code {
+.project__button--code {
   width: 90px;
   border: 1px solid black;
   border-radius: 5px;
@@ -121,12 +122,16 @@ body {
   text-align: center;
   margin: 0 8px 0 0;
 }
-.project-section .project__button--preview {
+.project__button--preview {
   width: 120px;
   border: 1px solid black;
   border-radius: 5px;
   padding: 5px 10px;
   text-align: center;
+}
+
+.project-desktop {
+  display: none;
 }
 
 .footer {
@@ -213,6 +218,33 @@ body {
   }
   .skills__visual-grid--group {
     margin: 10px;
+  }
+  .project-section {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 100px 2fr 2fr;
+    place-items: center;
+    padding: 20px 100px 50px;
+  }
+  .project-section__title {
+    grid-column: 1/4;
+    grid-row: 1;
+    text-align: center;
+  }
+  .project-section .project-desktop {
+    display: inline-block;
+    background-color: green;
+    width: 90%;
+    padding: 20px 0 40px;
+  }
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 70px 20px 90px;
   }
 }
 .introduction__job {

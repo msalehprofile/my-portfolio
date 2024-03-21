@@ -104,7 +104,7 @@ body {
     .project-section__title{
         padding: 20px;
     }
-
+}
     .project {
         background-color: green;
         width: 90%;
@@ -150,6 +150,10 @@ body {
             }
         }
     }
+
+
+.project-desktop {
+    display:none;
 }
 
 .footer {
@@ -251,5 +255,36 @@ body {
                 margin: 10px;
             }
         }
+    }
+
+    .project-section {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 2fr 2fr 2fr;
+        grid-template-rows: 100px 2fr 2fr;
+        place-items: center;
+        padding: 20px 100px 50px;
+
+        &__title{
+            grid-column: 1/4;
+            grid-row: 1;
+            text-align: center;
+        }
+
+        .project-desktop {
+            display: inline-block;
+            background-color: green;
+            width: 90%;
+            padding: 20px 0 40px;
+        }
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 70px 20px 90px;
     }
 }

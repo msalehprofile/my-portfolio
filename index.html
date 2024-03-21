@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-
+<!-- navigation is only visible on desktop version -->
     <nav class="navigation">
         <h1 class="navigation__name">Molly Saleh</h1>
         <div class="navigation__menu">
@@ -18,6 +18,7 @@
         </div>
     </nav>
 
+<!-- introduction section, image only visible on desktop -->
     <div class="introduction">
         <div class="introduction__hi-job">
             <h1 class="introduction__hi">Hey! I'm Molly Saleh &#128075;</h1>
@@ -25,13 +26,14 @@
         </div>
         <img src="./images/desk-top-images/female-web-developer.webp" alt="girl coding" class="introduction__image">
     </div>
-        
+<!-- about me section with image and short description  -->
     <div class="aboutme">
         <h1 class="aboutme__heading">About me</h1>
         <img src="./images/profile-pic.jpeg" alt="image of myself" class="aboutme__image">
         <p class="aboutme__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore nisi animi excepturi perferendis rerum cupiditate velit pariatur et quos odit praesentium fugiat soluta, rem laboriosam! Dolorum labore accusamus corrupti ut? <br/><br/>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore nisi animi excepturi perferendis rerum cupiditate velit pariatur et quos odit praesentium fugiat soluta, rem laboriosam! Dolorum labore accusamus corrupti ut?</p>
     </div>
-    
+
+<!-- skills section with 9 skills shown -->
     <div class="skills">
         <h1 class="skills__heading">Technical Skills</h1>
         <p class="skills__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
@@ -83,7 +85,8 @@
             </div>
         </grid>
     </div>
-
+    
+<!-- section showing main project, 3 visible on mobile, 6 visible on desktop -->
     <div class="project-section">
         <h1 class="project-section__title">My Projects</h1>
         <article class="project">
@@ -118,8 +121,43 @@
                 <a href="" class="project__button--preview">Preview &lt/&gt</a>
             </div>
         </article>
+
+<!-- These projects can only be seen in desktop -->
+<article class="project-desktop">
+    <img src="./images/project-image.avif" alt="project image" class="project__img">
+    <h4 class="project__language">language</h4>
+    <h1 class="project__name">Client Project</h1>
+    <p class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi consectetur rem accusamus amet doloribus quasi! Nostrum labore iusto dignissimos cum modi</p>
+    <div class="project__button">
+        <a href="" class="project__button--code">Code &lt/&gt</a>
+        <a href="" class="project__button--preview">Preview &lt/&gt</a>
+    </div>
+</article>
+
+        <article class="project-desktop">
+            <img src="./images/project-image.avif" alt="project image" class="project__img">
+            <h4 class="project__language">language</h4>
+            <h1 class="project__name">Client Project</h1>
+            <p class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi consectetur rem accusamus amet doloribus quasi! Nostrum labore iusto dignissimos cum modi</p>
+            <div class="project__button">
+                <a href="" class="project__button--code">Code &lt/&gt</a>
+                <a href="" class="project__button--preview">Preview &lt/&gt</a>
+            </div>
+        </article>
+
+        <article class="project-desktop">
+            <img src="./images/project-image.avif" alt="project image" class="project__img">
+            <h4 class="project__language">language</h4>
+            <h1 class="project__name">Client Project</h1>
+            <p class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi consectetur rem accusamus amet doloribus quasi! Nostrum labore iusto dignissimos cum modi</p>
+            <div class="project__button">
+                <a href="" class="project__button--code">Code &lt/&gt</a>
+                <a href="" class="project__button--preview">Preview &lt/&gt</a>
+            </div>
+        </article>
     </div>
 
+<!-- footer showing email address and social media links -->
     <footer class="footer">
         <div class="footer__logos">
             <img src="./images/github-logo.png" alt="" class="logos__github">
