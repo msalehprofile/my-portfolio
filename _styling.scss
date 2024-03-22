@@ -16,6 +16,23 @@ $color-footer: #deb8e6;
     font-weight: 100;
 
 }
+.mobilenav__toggle {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 2px;
+    background-color: $color-primary;
+    margin: 6px 0;
+}
+
+.mobilenav__toggle:active {
+    transform: rotate(-180deg);
+    transition: 0.5s;
+    
+}
 
 // setting font size and weight to intro
 .introduction__job {
@@ -39,6 +56,7 @@ $color-footer: #deb8e6;
     }
 }
 
+// adding font sizes and weights to skills section
 .skills {
     &__heading {
         font-weight: 600;
@@ -52,9 +70,8 @@ $color-footer: #deb8e6;
     }
 }
 
+// adding font sizes and weights to project section
 .project-section {
-
-
     &__title {
         font-weight: 600;
         font-size: 25px;
@@ -79,12 +96,18 @@ $color-footer: #deb8e6;
             font-weight: lighter;
         }
 
+// styling the buttons together
         &__button--code, &__button--preview {
+            border: 1px solid black;
             font-size: 16px;
             font-weight: 600;
+            padding: 5px 12px 1px;
             text-decoration: none;
             color:black;
+            border-radius: 5px;
+            text-align: center;
 
+//when you click on a button it changes colour
             &:active {
                 background-color: $color-button;
                 border: 1px solid $color-button;
@@ -95,6 +118,7 @@ $color-footer: #deb8e6;
     }
 }
 
+//styling the footer so you can see the logos
 .footer {
     background-color: $color-footer;
 
@@ -105,7 +129,11 @@ $color-footer: #deb8e6;
     }
 }
 
+//changing styling for a desktop
 @media screen and (min-width:1440px) {
+    .mobilenav__toggle {
+        display: none;
+    }
     .navigation {
 
         &__name{
@@ -121,13 +149,14 @@ $color-footer: #deb8e6;
         &__menu--button {
             border: 1px solid $color-primary;
             border-radius: 5px;
-            padding: 5px 16px;
+            padding: 5px 16px 1px;
             text-decoration: none;
             background-color: $color-white;
             color: $color-primary;
             font-size: 16px;
             font-weight: 500;
-            
+
+//changed interaction so button changes colour when you hover            
             &:hover {
                 background-color: $color-button;
                 border: 1px solid $color-button;
@@ -140,5 +169,7 @@ $color-footer: #deb8e6;
             background-color: $color-button;
             border: 1px solid $color-button;
             color: $color-white;
+            line-height: auto;
         }
+    
 }

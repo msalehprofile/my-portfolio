@@ -15,7 +15,12 @@ body {
 .navigation {
     display:none;
 }
-
+.introduction__mobilenav {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 //intro section layout
 .introduction {
     height: auto;
@@ -139,20 +144,11 @@ body {
 
             &--code {
                 width: 100px;
-                border: 1px solid black;
-                border-radius: 5px;
-                padding: 5px 12px;
-                text-align: center;
                 margin-right: 18px;
             }
 
             &--preview  {
                 width: 120px;
-                border: 1px solid black;
-                border-radius: 5px;
-                padding: 5px 12px;
-                text-align: center;
-                
             }
         }
     }
@@ -195,11 +191,12 @@ body {
 
         &__menu--link {
             padding: 1px;
+            margin: 0 8px;
         }
 
         &__menu--button {
-            padding: 10px;
             margin: 10px;
+            background-color: green;
         }
     }
 
@@ -214,6 +211,7 @@ body {
 
         &__hi {
             padding-bottom: 30px;
+            grid-column: 1;
         }
         &__image {
             display: block;
